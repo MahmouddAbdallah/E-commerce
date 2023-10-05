@@ -1,0 +1,72 @@
+.SpecialProductsCard{
+    background: var(--color-white);
+}
+.SpecialProductsCard .img-product{
+    height: 200px;
+}
+.SpecialProductsCard .precent{
+    background: var(--color-gold);
+    border-radius: 9999px;
+    width: 35px;
+}
+.SpecialProductsCard .precent p{
+    font-size: 10px;
+    font-weight: 500;
+}
+.SpecialProductsCard .details .star{
+    color: var(--color-gold);
+}
+.SpecialProductsCard .details .brand{
+    color: var(--color-gold);
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+.SpecialProductsCard .details .money{
+    font-size: 14px;
+    font-weight: 500;
+}
+.SpecialProductsCard .details .money .price{
+    color: var(--color-red);
+}
+.SpecialProductsCard .details .money .oldPrice{
+    color: rgba(0, 0, 0, 0.403)
+
+}
+.SpecialProductsCard .date .time {
+    background: var(--color-red);
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 500;
+}
+.SpecialProductsCard .date .numer-of-date{
+    font-size: 14px;
+    font-weight: 600;
+}
+.SpecialProductsCard .date .string-of-date{
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000071;
+}
+.details .btn{
+    background: var(--color-blue-900);
+    color: var(--color-white);
+    border-radius: 9000px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 8px;
+}
+.details .btn:hover{
+    background: var(--color-gold);
+}
+.SpecialProductsCard .review{
+    background: var(--color-white);
+    border: #00000030 solid 1px;
+    border-radius: 5px;
+}
+.SpecialProductsCard .review .img-review{
+    height: 70px;
+    width: auto;
+}

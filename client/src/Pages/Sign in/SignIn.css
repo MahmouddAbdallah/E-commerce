@@ -1,0 +1,29 @@
+.signIn{
+    width: 100%;
+    height: 100vh;
+    background: var(--color-blue-900);
+
+}
+.signIn form {
+    background: var(--color-blue-900);
+    padding: 40px 50px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+}
+.signIn form button{
+    background: var(--color-gold);
+    border: none ;
+    padding: 3px ;
+    border-radius: .2rem !important;
+    font-weight: 500;
+}
+@media (min-width:768px){
+    .signIn {
+    background: var(--color-gray);
+    }
+    .signIn form {
+        background: var(--color-blue-900);
+        width: 400px;
+    }
+}

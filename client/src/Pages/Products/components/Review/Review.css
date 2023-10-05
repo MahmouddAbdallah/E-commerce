@@ -1,0 +1,13 @@
+.picture{
+    border-radius: 99999px;
+    overflow: hidden;
+    width: 38px;
+    height: 38px;
+}
+.picture img{
+    width: 38px;
+    height: 38px;
+}
+.nameStars{
+    line-height: 0px;
+}

@@ -1,0 +1,25 @@
+.product {
+    color: var(--color-black);
+}
+.product:hover{
+    color: var(--color-black);
+}
+.product .stars .star{
+    color:var(--color-gold);
+}
+.product .card{
+    border:none !important
+}
+.card .card-img{
+    height: 210px;
+    object-fit: contain;
+}
+.card .title {
+    font-size: 14px;
+}
+.card .price {
+    font-size: 14px;
+}
+.card .empty-star {
+    color: #00000023;
+}

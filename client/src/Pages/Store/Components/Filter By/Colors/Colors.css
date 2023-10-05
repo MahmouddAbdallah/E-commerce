@@ -1,0 +1,63 @@
+.colors .color{
+    width: 35px;
+    height: 35px;
+    border-radius: 999px;
+    border: none !important;
+}
+.colors .blue     {
+    background:#0178ff ;
+}
+.colors .black    {
+    background: #000;
+}
+.colors .green    {
+    background: green;
+}
+.colors .brown    {
+    background: brown;
+}
+.colors .gray     {
+    background: gray;
+}
+.colors .red      {
+    background: red;
+}
+.colors .olive    {
+    background: olive;
+}
+.colors .maroon   {
+    background: maroon;
+}
+.colors .purple   {
+    background: purple;
+}
+.colors .orange   {
+    background: orange;
+}
+.colors .yellow   {
+    background: yellow;
+}
+.colors .pink     {
+    background: pink;
+}
+.colors .rust     {
+    background: blanchedalmond;
+}
+.colors .teal     {
+    background: teal;
+}
+.colors .peach    {
+    background: palegreen;
+}
+.colors .sliver   {
+    background: silver;
+}
+.colors .lavender {
+    background: lavender;
+}
+.colors .cyan     {
+    background: cyan;
+}
+.colors .tan {
+    background: tan;
+}

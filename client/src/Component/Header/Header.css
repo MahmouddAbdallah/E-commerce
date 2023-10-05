@@ -1,0 +1,19 @@
+.header-top-strip{
+    background: var(--color-black);
+    color:var(--color-white)
+}
+.header-top-strip .third-header{
+    background: var(--color-blue-900);
+}
+
+
+@media (max-width: 576px) { 
+    .third-header ul{
+        gap: 10px !important;
+    }
+    .third-header ul li a ,.third-header select{
+        font-weight: 600;
+        font-size: 10px !important;
+        white-space: nowrap;
+    }
+}

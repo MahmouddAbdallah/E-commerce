@@ -1,0 +1,42 @@
+.wrapper .categroy .img-fluid{
+    height: 100px;
+    object-fit: contain;
+}
+.wrapper .categroy .title{
+    font-size: 16px;
+    font-weight: 500;
+} 
+.wrapper .categroy .subtitle{
+    font-size: 12px;
+    font-weight: 500;
+} 
+.wrapper .categroy >div:nth-child(1),
+.wrapper .categroy >div:nth-child(2),
+.wrapper .categroy >div:nth-child(3),
+.wrapper .categroy >div:nth-child(4),
+.wrapper .categroy >div:nth-child(5),
+.wrapper .categroy >div:nth-child(6)
+{
+    border-bottom: 2px solid #00000024;
+}
+.wrapper .categroy >div:nth-child(1),
+.wrapper .categroy >div:nth-child(3),
+.wrapper .categroy >div:nth-child(5),
+.wrapper .categroy >div:nth-child(7)
+{
+    border-right: 2px solid #00000024;
+}
+@media (min-width: 992px)
+{
+    .wrapper .categroy >div:nth-child(5),
+    .wrapper .categroy >div:nth-child(6)
+    {
+        border-bottom:none;
+    }
+
+    .wrapper .categroy >div:nth-child(2),
+    .wrapper .categroy >div:nth-child(6)
+    {
+        border-right: 2px solid #00000024;
+    }
+}

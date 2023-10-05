@@ -1,0 +1,44 @@
+footer{
+    background: var(--color-blue-900);
+}
+footer form h3 svg{
+    color: var(--color-white) !important;
+    margin-right: 10px !important;
+}
+footer form input::placeholder {
+    font-size: 15px;
+}
+footer form input:focus {
+    outline: none ;
+}
+footer .subscribe{
+    background: var(--color-blue-900);
+    color: var(--color-white);
+}
+footer .container h5{
+    font-weight: 500;
+}
+footer .container ul li a{
+    color: var(--color-white);
+    opacity: 90%;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0px;
+}
+@media (min-width: 640px) { 
+
+}
+@media (min-width: 768px) { 
+    footer form h3{
+        font-size: 18px !important;
+    }
+}
+@media (min-width: 1024px) { 
+
+}
+@media (min-width: 1280px) { 
+
+}
+@media (min-width: 1536px) { 
+
+}

@@ -1,0 +1,12 @@
+.filterby .filter-price .filter-price-input{
+    border: none !important ;
+    background: #00000012;
+    border-radius: 3px;
+}
+.filterby .filter-price .filter-price-input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+}
+.filterby .filter-price .filter-price-input:focus{
+    outline :none!important;
+}

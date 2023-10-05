@@ -1,0 +1,21 @@
+.cardFeature .card p{
+    font-size: 13px;
+    color: var(--color-black);
+}
+.cardFeature .card h5{
+    color: var(--color-black);
+}
+.active .card{
+    background: var(--color-black);
+}
+.active .card p{
+    color: #ffffffcc !important;
+}
+.active .card h5{
+    color: var(--color-white) !important;
+}
+@media (min-width:992px) {
+    .features .cards .col-lg-4 {
+        width: 32.3979% !important;
+    }
+}

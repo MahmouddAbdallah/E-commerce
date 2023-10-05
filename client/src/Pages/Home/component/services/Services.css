@@ -1,0 +1,14 @@
+.wrapper .serviecs .title{
+    font-size: 16px;
+    font-weight: 500;
+} 
+.wrapper .serviecs .subtitle{
+    font-size: 12px;
+    font-weight: 500;
+} 
+@media (min-width: 992px)
+{
+    .wrapper .serviecs .col-lg-3 {
+    width: 20%;
+    }
+}

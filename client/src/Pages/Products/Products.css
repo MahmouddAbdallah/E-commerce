@@ -1,0 +1,26 @@
+.products{
+    background: var(--color-gray);
+}
+.products .title{
+    border-bottom: 1px rgba(0, 0, 0, 0.199) solid;
+}
+.products .smallImages{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.products .desc{
+    font-size: 14px;
+    font-weight: 500;
+}
+.products .pay>:nth-child(1),
+.products .pay>:nth-child(2){
+    border-radius: 99999px;
+    color: var(--color-white);
+    background: var(--color-blue-900);
+}
+.products .pay>:nth-child(2):hover,
+.products .pay>:nth-child(1):hover{
+    background: var(--color-gold);
+    color: var(--color-black);
+}
