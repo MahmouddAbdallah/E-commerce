@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import './Card.css'
-const Card = ({ key, image, subTitle, title, price, className }) => {
+const Card = ({ image, subTitle, title, price, className }) => {
     return (
-        <div key={key} className={`cardFeature ${className}`}>
+        <div className={`cardFeature ${className}`}>
             <div className="card py-3 px-3">
                 <div className=' text-white'>
                     <p className=' text-uppercase'>{subTitle}</p>
@@ -18,12 +18,11 @@ const Card = ({ key, image, subTitle, title, price, className }) => {
 }
 
 Card.propTypes = {
-    key: PropTypes.string,
     image: PropTypes.string,
     subTitle: PropTypes.string,
     title: PropTypes.string,
     className: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
 }
 
 export default Card

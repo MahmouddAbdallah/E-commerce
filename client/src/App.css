@@ -24,7 +24,7 @@ ul{
     align-items: center;
 }
 .border-none{
-    border: none;
+    border: none !important;
 }
 ul{
     list-style: none;
@@ -50,9 +50,27 @@ ul{
 .font-semibold{
     font-weight:500!important ;
 }
+.border-t{
+    border-top : solid 1px #0000002a !important;
+}
 .border-b{
     border-bottom : solid 1px #0000002a !important;
 }
+.border-s{
+    border-right : solid 1px #0000002a !important;
+}
+.border-e{
+    border-left : solid 1px #0000002a !important;
+}
 .outline-none{
     outline: none !important;
+}
+.resize-none{
+    resize: none;
+}
+.bg-gold{
+    background: var(--color-gold) !important;
+}
+.cursor-pointer{
+    cursor: pointer !important;
 }

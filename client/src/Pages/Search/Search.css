@@ -1,0 +1,7 @@
+.search-page{
+    background: var(--color-gray);
+}
+
+.search-page .product img{
+    width: 120px;
+}

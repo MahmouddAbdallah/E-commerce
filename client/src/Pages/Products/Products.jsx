@@ -2,27 +2,42 @@ import './Products.css'
 import axios from 'axios'
 import { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { AiFillStar } from 'react-icons/ai'
 import Review from './components/Review/Review'
-
+import Stars from '../../Component/Stars/Stars'
+import ReactImageMagnify from 'react-image-magnify';
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../redux/features/product'
+import { DataContext } from '../../context/MainContextState'
 const Product = () => {
     const { _id } = useParams()
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(false)
+    const [changeImage, setChangeImage] = useState(0)
+    const { user, config } = DataContext()
+    const disptach = useDispatch()
+
     const getProduct = useCallback(
         async () => {
             try {
-                const { data } = await axios.get(`/api/v1/product/${_id}`)
+                const { data } = await axios.get(`/api/v1/product/${_id}`, config)
                 setProduct(data.product)
                 setLoading(true)
             } catch (error) {
                 console.error(error);
             }
         }
-        , [_id])
+        , [_id, config])
     useEffect(() => {
         getProduct()
     }, [getProduct])
+    const cartAdding = async () => {
+        const { data } = await axios.post("/api/v1/cart", {
+            user: user._id,
+            product: product._id
+        }, config)
+        disptach(addToCart(data.cart))
+        console.log(data.cart.product);
+    }
     return (
         <div className='products'>
             {loading ?
@@ -30,8 +45,6 @@ const Product = () => {
                     <div>
                         {[product].map((item) => {
                             const stars = item?.rating?.rate
-                            const about = item.about
-                            console.log(about);
                             return (
                                 <div key={item._id} className=' bg-white'>
                                     <div className=' row'>
@@ -40,15 +53,31 @@ const Product = () => {
                                                 <div className='d-flex flex-column gap-2 pt-2'>
                                                     {item.images.map((image, i) => {
                                                         return (
-                                                            <button onMouseOver={() => {
-                                                            }} key={i} className=' bg-transparent border rounded p-1'>
-                                                                <img src={`${image.startsWith(".") ? "." : ""}${image}`} className=' img-fluid smallImages' alt="" />
+                                                            <button onClick={(e) => {
+                                                                e.preventDefault()
+                                                                setChangeImage(i);
+                                                            }} key={i} className=' bg-transparent border rounded'>
+                                                                <img src={`${image.startsWith(".") ? "." : ""}${image}`} className='smallImages' alt="" />
                                                             </button>
                                                         )
                                                     })}
                                                 </div>
                                                 <div className='m-2 p-2 border rounded' >
-                                                    <img src={`${item.mainImage.startsWith(".") ? "." : ""}${item.mainImage}`} className=' img-fluid' alt="" />
+                                                    <ReactImageMagnify
+                                                        {...{
+                                                            smallImage: {
+                                                                alt: 'Product Image',
+                                                                src: `${item.images[changeImage].startsWith(".") ? "." : ""}${item.images[changeImage] || item.mainImage}`,
+                                                                isFluidWidth: true
+                                                            },
+                                                            largeImage: {
+                                                                src: `${item.images[changeImage].startsWith(".") ? "." : ""}${item.images[changeImage] || item.mainImage}`,
+                                                                width: 1200,
+                                                                height: 1800
+                                                            }
+                                                        }}
+                                                    />
+                                                    {/* <img src={`${item.mainImage.startsWith(".") ? "." : ""}${item.mainImage}`} className=' img-fluid' alt="" /> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -60,28 +89,8 @@ const Product = () => {
                                                 <div className='py-2'>
                                                     <h6>${item.price}</h6>
                                                 </div>
-                                                <div className='d-flex'>
-                                                    {Array(Math.floor(stars))
-                                                        .fill()
-                                                        .map((_, i) => {
-                                                            return (
-                                                                <div key={i}  >
-                                                                    <AiFillStar className='star' />
-                                                                </div>
-                                                            )
-                                                        })
-                                                    }
-                                                    {Math.floor(stars) < 5 &&
-                                                        Array(5 - Math.floor(stars))
-                                                            .fill()
-                                                            .map((_, i) => {
-                                                                return (
-                                                                    <div key={i}  >
-                                                                        <AiFillStar className='empty-star ' />
-                                                                    </div>
-                                                                )
-                                                            })
-                                                    }
+                                                <div>
+                                                    <Stars stars={stars} />
                                                 </div>
                                                 <div className=' d-inline-flex'>
                                                     <h6>Brand :&#160;</h6>
@@ -93,7 +102,7 @@ const Product = () => {
                                                 </div>
                                                 <h6>pay :</h6>
                                                 <div className='pay d-flex gap-3 ms-5'>
-                                                    <button className=' btn'>Add to cart</button>
+                                                    <button onClick={cartAdding} className=' btn'>Add to cart</button>
                                                     <button className=' btn'>Buy it now</button>
                                                 </div>
                                             </div>

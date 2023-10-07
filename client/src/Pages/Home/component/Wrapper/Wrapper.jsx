@@ -1,6 +1,6 @@
 import Brand from '../Brand/Brand'
 import Category from '../Category/Category'
-// import Feature from '../Featured Collection/Feature'
+import Feature from '../Featured Collection/Feature'
 import PopularProducts from '../Our Popular Products/PopularProducts'
 import SpecialProducts from '../Special Products/SpecialProducts'
 import Services from '../services/Services'
@@ -10,16 +10,15 @@ const Wrapper = () => {
 
     return (
         <div className="wrapper">
-            <div className=' container'>
+            <div className=' container '>
                 <div>
                     <Services />
                 </div>
-                {/* categroy */}
                 <div>
                     <Category />
                 </div>
                 <div>
-                    {/* <Feature /> */}
+                    <Feature />
                 </div>
                 <div>
                     <SpecialProducts />

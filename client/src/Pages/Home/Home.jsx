@@ -4,7 +4,7 @@ import Wrapper from './component/Wrapper/Wrapper'
 const Home = () => {
 
     return (
-        <section className="pb-5 ">
+        <section className="">
             <div>
                 <Hero />
             </div>

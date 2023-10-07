@@ -47,15 +47,17 @@ const Brand = () => {
         },
     ]
     return (
-        <div className=' mt-5 bg-white rounded shadow-sm row'>
-            <Marquee>
-                {brand.map((item) => (
-                    <div target='blank' key={item.id} className=' mx-4'>
-                        <img src={item.img} className=' img-fluid' alt="" />
-                    </div>
-                ))}
-            </Marquee>
-            <a href=""></a>
+        <div className=''>
+            <div className=' mt-5 bg-white rounded shadow-sm row'>
+                <Marquee>
+                    {brand.map((item) => (
+                        <div target='blank' key={item.id} className=' mx-4'>
+                            <img src={item.img} className=' img-fluid' alt="" />
+                        </div>
+                    ))}
+                </Marquee>
+                <a href=""></a>
+            </div>
         </div>
     )
 }

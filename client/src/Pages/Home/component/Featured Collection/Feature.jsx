@@ -10,7 +10,7 @@ const Feature = () => {
             title: "Haveils",
             description: "Kids Headphoes Bulk 10 Pack Multi Colord For",
             star: 4,
-            price: "$ 150"
+            price: 150
         },
         {
             id: 2,
@@ -18,40 +18,40 @@ const Feature = () => {
             title: "Sony",
             description: " camera is a high-quality digital camera that offers exceptional image and video capturing capabilities.",
             items: "8 itmes",
-            srar: 3,
-            price: "$ 150"
+            star: 3,
+            price: 150
         },
         {
             id: 3,
             image: "./images/laptop.jpg",
             title: "Computers & Laptop",
             items: "8 itmes",
-            srar: 3,
-            price: "$ 150"
+            star: 3,
+            price: 150
         },
         {
             id: 4,
             image: "./images/laptop.jpg",
             title: "Computers & Laptop",
             items: "8 itmes",
-            srar: 3,
-            price: "$ 150"
+            star: 3,
+            price: 150
         },
         {
             id: 4,
             image: "./images/laptop.jpg",
             title: "Computers & Laptop",
             items: "8 itmes",
-            srar: 3,
-            price: "$ 150"
+            star: 3,
+            price: 150
         },
         {
             id: 4,
             image: "./images/laptop.jpg",
             title: "Computers & Laptop",
             items: "8 itmes",
-            srar: 3,
-            price: "$ 150"
+            star: 3,
+            price: 150
         },
     ]
     return (
@@ -60,7 +60,7 @@ const Feature = () => {
                 <h4> Featured Collection</h4>
             </div>
             <div className=' productFeatures'>
-                <div className='  row justify-content-lg-center rounded gap-lg-2'>
+                <div className='  row justify-content-lg-center rounded'>
                     {feature.map((item) => (
                         <Product
                             className=" my-3 col-6 col-md-4 col-lg-2 "

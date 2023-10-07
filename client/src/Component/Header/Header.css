@@ -1,4 +1,8 @@
 .header-top-strip{
+    position: relative;
+    z-index: 999;
+}
+.header-top-strip{
     background: var(--color-black);
     color:var(--color-white)
 }

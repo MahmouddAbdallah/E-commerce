@@ -10,15 +10,18 @@ export const ContextProvider = ({ children }) => {
     const [categories, setCategories] = useState([]);
     const [page, setPage] = useState(1)
     const [loading, setLoading] = useState(false)
+    const [priceFrom, setPriceFrom] = useState("")
+    const [priceTo, setPriceTo] = useState("")
     const getProducts = useCallback(async () => {
         try {
-            const { data } = await axios.get(`/api/v1/product?page=${page}`)
+            const { data } = await axios.get(`/api/v1/product?page=${page}&${(priceFrom == "" || priceTo == "") ? "" : `price[gte]=${priceFrom}&price[lte]=${priceTo}`}`)
+            console.log();
             setProducts(data.products);
             setLoading(true)
         } catch (error) {
             console.error(error);
         }
-    }, [page])
+    }, [page, priceFrom, priceTo])
     useEffect(() => {
         getProducts()
     }, [getProducts])
@@ -35,7 +38,17 @@ export const ContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <CreateContext.Provider value={{ products, categories, setPage, page, loading }}>
+        <CreateContext.Provider value={{
+            products,
+            categories,
+            setPage,
+            page,
+            loading,
+            priceFrom,
+            setPriceFrom,
+            priceTo,
+            setPriceTo,
+        }}>
             {children}
         </CreateContext.Provider>
     )

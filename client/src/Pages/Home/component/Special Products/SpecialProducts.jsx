@@ -6,7 +6,7 @@ const SpecialProducts = () => {
     const [spicalProducts, setSpicalProducts] = useState([])
     const getProducts = async () => {
         try {
-            const { data } = await axios.get(`/api/v1/product?find={"section":"specialProducts"}`)
+            const { data } = await axios.get(`/api/v1/product?limit=4&find={"section":"specialProducts"}`)
             setSpicalProducts(data.products);
         } catch (error) {
             console.error(error);
@@ -15,7 +15,6 @@ const SpecialProducts = () => {
     useEffect(() => {
         getProducts()
     }, [])
-    console.log();
     return (
         <div className=" pt-5">
             <div className=' mt-5 TitleHead'>

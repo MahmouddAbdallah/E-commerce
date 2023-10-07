@@ -1,8 +1,7 @@
-import { ContextState } from '../context/ContextState'
-import Colors from './Colors/Colors'
 import './FilterBy.css'
-const FilterBy = () => {
-    const { priceFrom, setPriceFrom, priceTo, setPriceTo, } = ContextState()
+import PropTypes from 'prop-types'
+
+const FilterBy = ({ priceFrom, setPriceFrom, priceTo, setPriceTo }) => {
     return (
         <div className=" p-2 bg-white rounded mt-3 filterby">
             <div className='mb-4'>
@@ -34,17 +33,15 @@ const FilterBy = () => {
                         </div>
                     </form>
                 </div>
-                <div className='pt-4'>
-                    <div className=''>
-                        <h6>Color</h6>
-                    </div>
-                    <div>
-                        <Colors />
-                    </div>
-                </div>
             </div>
-        </div>
-    )
+        </div>)
+}
+
+FilterBy.propTypes = {
+    priceFrom: PropTypes.number,
+    setPriceFrom: PropTypes.func,
+    priceTo: PropTypes.number,
+    setPriceTo: PropTypes.func
 }
 
 export default FilterBy

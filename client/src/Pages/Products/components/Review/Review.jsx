@@ -3,6 +3,7 @@ import './Review.css'
 import axios from 'axios'
 import { useCallback, useEffect, useState } from 'react'
 import Stars from '../../../../Component/Stars/Stars'
+import Modal from './Modal/Modal'
 
 const Review = ({ productId }) => {
     const [reviews, setReviews] = useState([])
@@ -19,9 +20,8 @@ const Review = ({ productId }) => {
     useEffect(() => {
         getReviews()
     }, [getReviews])
-    console.log(reviews);
     return (
-        <div>
+        <div className='review'>
             <div className=' container py-3 bg-white mt-5'>
                 {
                     reviews.map(item => (
@@ -39,7 +39,7 @@ const Review = ({ productId }) => {
                             </div>
                             <div className='review- d-flex'>
                                 <div className='font-semibold'>
-                                    Review : &#160;
+                                    Review&#160;:&#160;
                                 </div>
                                 <div className='w-100'>
                                     <span className=''>
@@ -50,6 +50,11 @@ const Review = ({ productId }) => {
                         </div>
                     ))
                 }
+            </div>
+            <div className=' bg-white'>
+                <div className=' d-flex justify-content-center py-2'>
+                    <Modal productId={productId} />
+                </div>
             </div>
         </div>
     )

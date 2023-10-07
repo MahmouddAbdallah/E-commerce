@@ -12,6 +12,8 @@ import Not404 from './Pages/Not Define/Not404'
 import SignUp from './Pages/Sign up/SignUp'
 import SignIn from './Pages/Sign in/SignIn'
 import { MainContextState } from './context/MainContextState'
+import Checkout from './Pages/Checkout/Checkout'
+import Search from './Pages/Search/Search'
 
 axios.defaults.baseURL = "http://localhost:8000"
 axios.defaults.withCredentials = true
@@ -26,6 +28,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path='/store' element={<Store />} />
             <Route path="/about" element={<About />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/search" element={<Search />} />
             <Route path="*" element={<Not404 />} />
           </Route>
           <Route path="/signup" element={<SignUp />} />

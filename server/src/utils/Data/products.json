@@ -1,4 +1,31 @@
-[
+[ {
+    "mainImage":"./images/product_Iphone_12_red_1.jpg" ,
+    "images":[
+        "product_Iphone_12_red_1.jpg",
+        "product_Iphone_12_red_2.jpg",
+        "product_Iphone_12_red_3.jpg"
+        ],
+    "title": "Apple iPhone 12, 64GB, Red - Unlocked",
+    "brand": "Iphone",
+    "price": 439.00,
+    "priceExp": "56 Days",
+    "category": "651833563cbf797f9b7cbda8",
+    "desc":"A like-new experience. Backed by a one-year satisfaction guarantee. This Renewed Premium product is shipped and sold by Amazon and has been certified by Amazon to work and look like new. With at least 90% battery life, it comes in deluxe, Amazon-branded packaging and is backed by a one-year warranty and technical support.",
+    "pieces": 145,
+    "rating": {
+        "rate": 4.1,
+        "count": 259
+    },
+    "about":{
+        "Model Name":"iPhone 12",
+        "Wireless Carrier":"Unlocked",
+        "Operating System":"iOS 16",
+        "Cellular Technology":"5G",
+        "Memory Storage Capacity":"64 GB",
+        "Connectivity Technology":" USB",
+        "Color":"Red"
+    }
+    },
     {
         "mainImage":"./images/special-1.png" ,
         "section":"",

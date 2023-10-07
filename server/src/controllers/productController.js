@@ -1,4 +1,5 @@
-const Product = require("../Model/Product")
+const Product = require("../Model/Product");
+const FeatureAPi = require("../utils/FeatureAPi/FeatureAPi");
 
 exports.createProduct = async (req, res) => {
     try {
@@ -34,34 +35,21 @@ exports.createProduct = async (req, res) => {
 }
 exports.getProducts = async (req, res) => {
     try {
-        let { sort, field, keyword, limit, page, find, ...other } = req.query
-        //implemation
-        const product = Product.find(other)
-        page = page || 1
-        limit = limit || 12
-        const skip = (page - 1) * limit
-        product.skip(skip).limit(limit)
-        //searching
-        if (keyword) {
-            const search = {}
-            search.$or = [
-                { title: { $regex: keyword, $options: "i" } },
-            ]
-            product.find(search)
-        }
-        //field 
-        field = field || " -__v"
-        product.select(field);
+        let { find } = req.query
+        const productAPI = new FeatureAPi(Product, req)
+            .filters()
+            .fields()
+            .sort()
+            .search()
+            .pagenation()
+            .populate('category', 'name image')
 
-        //find 
         if (find) {
-            find = JSON.parse(find)
-            console.log(find);
-            product.find(find)
+            productAPI.find()
         }
-        //excution
-        const products = await product.populate({ path: "category", select: "name image" })
-        res.status(201).json({ page, limit, products });
+
+        const products = await productAPI.Model
+        res.status(200).json({ products });
     } catch (error) {
         res.status(400).json({ error: error.message })
     }
@@ -95,7 +83,9 @@ exports.deleteProduct = async (req, res) => {
 exports.updateProduct = async (req, res) => {
     try {
         const { id } = req.params
-        const product = await Product.findByIdAndUpdate(id)
+        const { ...body } = req.body
+        console.log(body);
+        const product = await Product.findByIdAndUpdate(id, body, { new: true })
         if (product) {
             res.status(201).json({ product });
         } else {

@@ -18,14 +18,16 @@ app.use(cors({
     credentials: true
 }))
 //routers 
+const authRouter = require("./src/routers/authRouter")
 const cateogryRouter = require("./src/routers/categoryRouter")
 const productRouter = require("./src/routers/productRouter")
-const authRouter = require("./src/routers/authRouter")
 const reviewRouter = require("./src/routers/reviewRouter")
+const cartRouter = require("./src/routers/cartRouter")
+app.use("/api/auth", authRouter)
 app.use("/api/v1", cateogryRouter)
 app.use("/api/v1", productRouter)
 app.use("/api/v1", reviewRouter)
-app.use("/api/auth", authRouter)
+app.use("/api/v1", cartRouter)
 
 //connect to server 
 const server = http.createServer(app)

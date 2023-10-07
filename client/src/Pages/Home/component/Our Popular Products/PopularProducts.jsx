@@ -4,7 +4,7 @@ import './PopularProducts.css'
 const PopularProducts = () => {
     const popularProducts = [
         {
-            id: 1,
+            id: "1",
             image: "./images/special-1.png",
             images: ["./images/special-1.png", "./images/special-2.png"],
             subTitle: "Big Screen",
@@ -17,7 +17,7 @@ const PopularProducts = () => {
             stars: 3,
         },
         {
-            id: 2,
+            id: "2",
             image: "./images/special-2.png",
             images: ["./images/special-2.png", "./images/special-3.png"],
             subTitle: "Big Screen",
@@ -30,7 +30,7 @@ const PopularProducts = () => {
             stars: 3,
         },
         {
-            id: 3,
+            id: "3",
             image: "./images/special-3.png",
             images: ["./images/special-3.png", "./images/special-2.png"],
             subTitle: "Big Screen",
@@ -43,7 +43,7 @@ const PopularProducts = () => {
             stars: 3,
         },
         {
-            id: 4,
+            id: "4",
             image: "./images/special-1.png",
             images: ["./images/special-3.png", "./images/special-2.png"],
             subTitle: "Big Screen",

@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
     },
     picture: {
         type: String,
-        default: "https://marketplace.canva.com/EAFewoMXU-4/1/0/1600w/canva-purple-pink-gradient-man-3d-avatar-0o0qE2T_kr8.jpg"
+        default: "https://i.imgflip.com/6yvpkj.jpg"
     },
     email: {
         type: String,
@@ -16,6 +16,11 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: [true, "Email is Required"],
+    },
+    role: {
+        type: String,
+        enum: ['user', 'admin'],
+        default: "user"
     }
 }, { timestamps: true });
 const User = mongoose.model("User", UserSchema);

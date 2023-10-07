@@ -1,13 +1,26 @@
-.picture{
+.review .picture{
     border-radius: 99999px;
     overflow: hidden;
     width: 38px;
     height: 38px;
 }
-.picture img{
+.review.picture img{
     width: 38px;
     height: 38px;
 }
-.nameStars{
+.review .nameStars{
     line-height: 0px;
+}
+.review form textarea{
+    height: 120px;
+    background-color: #f8f8f842;
+}
+.review .btn{
+    border-radius: 99999px;
+    color: var(--color-white);
+    background: var(--color-blue-900);
+}
+.review .btn:hover{
+    background: var(--color-gold);
+    color: var(--color-black);
 }

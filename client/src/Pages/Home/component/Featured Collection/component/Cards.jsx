@@ -7,21 +7,21 @@ const Cards = () => {
             image: "./images/Smart_Watch_Series.png",
             subTitle: "Big Screen",
             title: "Smart Watch Series 7",
-            price: "From $350 or 4501 EGP for 40 Hours",
+            price: 350,
         },
         {
             id: 1,
             image: "./images/Apple_laptop.png",
             subTitle: "Big Screen",
             title: "Smart Watch Series 7",
-            price: "From $350 or 4501 EGP for 40 Hours",
+            price: 350,
         },
         {
             id: 1,
             image: "./images/Apple_laptop.png",
             subTitle: "Big Screen",
             title: "Smart Watch Series 7",
-            price: "From $350 or 4501 EGP for 40 Hours",
+            price: 350,
         },
     ]
     return (
