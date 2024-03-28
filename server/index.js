@@ -23,11 +23,14 @@ const cateogryRouter = require("./src/routers/categoryRouter")
 const productRouter = require("./src/routers/productRouter")
 const reviewRouter = require("./src/routers/reviewRouter")
 const cartRouter = require("./src/routers/cartRouter")
+const userRouter = require("./src/routers/userRouter")
+
 app.use("/api/auth", authRouter)
 app.use("/api/v1", cateogryRouter)
 app.use("/api/v1", productRouter)
 app.use("/api/v1", reviewRouter)
 app.use("/api/v1", cartRouter)
+app.use("/api/v1", userRouter)
 
 //connect to server 
 const server = http.createServer(app)

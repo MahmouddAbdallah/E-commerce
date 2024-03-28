@@ -1,4 +1,5 @@
-const Category = require("../Model/Category")
+const Category = require("../Model/Category");
+const FeatureAPi = require("../utils/FeatureAPi/FeatureAPi");
 
 exports.createCategory = async (req, res) => {
     try {
@@ -22,7 +23,13 @@ exports.createCategory = async (req, res) => {
 }
 exports.getCategories = async (req, res) => {
     try {
-        const categories = await Category.find()
+        const categorApi = new FeatureAPi(Product, req)
+            .filters()
+            .fields()
+            .sort()
+            .search()
+            .pagenation()
+        const categories = categorApi.Model;
         res.status(201).json({ categories });
     } catch (error) {
         res.status(400).json({ error })

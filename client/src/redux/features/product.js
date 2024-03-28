@@ -11,7 +11,6 @@ const product = createSlice({
     reducers: {
         cart(state, action) {
             state.cart = action.payload
-
         }
         ,
         addToCart(state, action) {
@@ -19,9 +18,7 @@ const product = createSlice({
         },
         removeFromCart(state, action) {
             const cart = state.cart.find((item) => item._id == action.payload);
-            state.cart = state.cart.filter((item) =>
-                item !== cart
-            )
+            state.cart = state.cart.filter((item) => item !== cart)
         }
     }
 })

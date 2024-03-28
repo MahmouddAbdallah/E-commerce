@@ -1,4 +1,93 @@
-[ {
+[   
+    {
+        "mainImage":	"./images/Apple_laptop.png" ,
+        "section":"featureCard",
+        "images":["./images/Apple_laptop.png",	"https://m.media-amazon.com/images/I/719C6bJv8jL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61XufEFo1dL._AC_SY355_.jpg"],
+        "subTitle": "Big Screen",
+        "title": "Apple 2022 MacBook Air M2 Chip (13-inch, 8GB RAM, 256GB SSD Storage) (QWERTY English) Midnight (Renewed Premium)",
+        "desc":"Renewed Premium products are shipped and sold by Amazon and have been certified to work and look like new. They have an increased battery life (min 90% battery capacity) and come with an Amazon-branded box and generic accessories which are in brand new condition. Renewed Premium products are not Apple certified but come with a one-year full satisfaction guarantee",
+        "brand": "Apple ",
+        "price": "979.00",
+        "category": "651833563cbf797f9b7cbda7",
+        "pieces": 200,
+        "rating": {
+            "rate": 3,
+            "count": 259
+        }
+    },
+    {
+        "mainImage":	"./images/Smart_Watch_Series.png" ,
+        "section":"featureCard",
+        "images":[	"./images/Smart_Watch_Series.png", "https://m.media-amazon.com/images/I/61gmK0qlifL._AC_SX466_.jpg"],
+        "subTitle": "Big Screen",
+        "title": "Smart Watch for Men Women Android iPhone with Alexa Built-in & Bluetooth Call(Answer/Make Call) 1.69\" Fitness Tracker with IP68 Waterproof, 60+ Sports, Heart Rate SpO2 Monitor, V7 Pro",
+        "desc":"【ALEXA BUILT-IN MAKES THINGS EASY】Use your voice to control the built-in Alexa in your V7 Pro smart watch to control the music playback, ask questions, read the news and get information, check the weather, set alarms, control compatible smart home devices, and more. It makes things on your wrist simple and easy, and will always work as your effective daily assissant. ✅【 MAKE/ANSWER CALL & SMART NOTIFICATION】With built-in speaker and bluetooth connectivity, you can directly make or receive calls with your family and friends via the smartwatch, also it supports multiple smart reminders, including incoming calls, text, SNS messages (Facebook, WhatsApp, Twitter, etc), daily reminder, etc, extremely convenient for your life and you will never miss any important information. ✅【 24/7 ALL-ROUND HEALTH TRACKING】Adopted high-performance optical sensors, the smart watch for android and iphone will timely and precisely work as a fitness tracker to record your daily walking steps, distances, calories, continuously monitor your heart rate, blood oxygen, stress and sleep quality with detailed data-based presentation to analyze and remind your body status and trend from your wrist, give you advice to help you adjust the lifestyle. ✅【 60+ SPORTS MODES & IP68 WATERPROOF】The smart watch for men and women supports more than 60+ sports modes indoors and outdoors (covering walking, cycling, hiking, yoga, swimming, etc), choose from the selected modes or add via Veryfit APP to set your training program and track your workout statistics. With the IP68 water resistance and drainage function, You don't have to worry about the normal use of your watch, even if you are swimming, washing your hands or exercising in the rain. ✅【 MAGNETIC CHARGING & LONG-LASTING】The smart watch is designed with a large-capacity and low comsupmtion battery, which allows it to last about 8 days for daily use, compatible with most android and iOS phone (andriod 6.0+ and iOS 9.0+), you can set the brightness, vibration, ringtone, wake geature on/off for your preference and easily charge the watch through the included magnetic charger. For the first use, please fully charge it for about two hours. ✅【200+ DIALS & OTHER FEATURES】SKG V7 Pro smart watch can be easily conrolled by the Veryfit app, it provides more than 200 watch faces to choose and includes other useful functions for you: breath training, women's health tracking, weather, music control, stopwatch, alarm clock, timer, vibration drainage, noise monitoring, flashlight, find the phone and so on. It is far more than a simple watch. ✅【SKG NEVER LETS YOU DOWN 】SKG is commited to providing you with smart wearable devices and personal health products, we highly value your health and experience in the store, your comfortability is the first priority, after the receival, For any product problem or suggestions, please don't hesitate to tell us directly. We are ready to offer you the most satisfying solution at any time. Your opinion matters, SKG always stays with you!",
+        "brand": "SKG ",
+        "oldPrice":"99",
+        "price": "79",
+        "priceExp": "56 Days",
+        "category": "651833563cbf797f9b7cbda7",
+        "pieces": 200,
+        "rating": {
+            "rate": 3,
+            "count": 259
+        }
+    },
+    {
+        "mainImage":	"https://m.media-amazon.com/images/I/71v2d15+K2L._AC_SX466_.jpg" ,
+        "section":"feature",
+        "images":[	"https://m.media-amazon.com/images/I/71v2d15+K2L._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/71v2d15+K2L._AC_SX466_.jpg"],
+        "subTitle": "Big Screen",
+        "title": "LG gram (2022) Laptop 16Z90Q 16\" Display, Intel Evo 12th Gen Core i7, 16GB RAM, 256 GB SSD, Windows 11, Black",
+        "desc":"Work without disruption with this lightweight laptop featuring and 80 Watt-hour battery, a 16-inch non-reflective display, and DCI-P3 99% (Typ.)* color gamut for sharp, stunning color Intel Evo Platform Powered by 12th Gen Intel Quad Core i7 Processor and Iris Xe Graphics carries you through work, studies, and surfing the web with bold and beautiful graphics PCIe4 M.2 NVMe SSD with 256GB of storage has the power to run multiple large applications and save important documents with ease. 16GB LPDDR5 RAM with a substantial clock speed of 5200 MHz makes it simple to work and play with minimal buffering Full HD IR Webcam helps you stay connected, with build-in AI sound technology to filter out unwanted background noise. Skip passwords and save time by logging in using your face with Windows Hello Keep your computer protected with Presence Detection, which locks your screen when you walk away. Smart Display blurs your screen to prevent passersby from viewing sensitive documents while you work",
+        "brand": "HP ",
+        "oldPrice":"1,199",
+        "price": "1,055",
+        "priceExp": "56 Days",
+        "category": "651833563cbf797f9b7cbda7",
+        "pieces": 200,
+        "rating": {
+            "rate": 5,
+            "count": 259
+        }
+    },
+    {
+        "mainImage":	"https://m.media-amazon.com/images/I/51nrKJxBsjL._AC_SX425_.jpg" ,
+        "section":"feature",
+        "images":[	"https://m.media-amazon.com/images/I/51nrKJxBsjL._AC_SX425_.jpg", "https://m.media-amazon.com/images/I/51woROgrd2L._AC_SX425_.jpg"],
+        "subTitle": "Big Screen",
+        "title": "QIMHAI 6.7Inch ip14pro Unlocked Cell Phone Android Phones 2GB RAM+16GB ROM Full Screen Straight Talk Phone Dual Sim Boost Mobile Phones Smart Phones Unlocked New for Android10.0 (Blue)",
+        "desc":"【Full Screen & 16MP+32MP HD Dual Camera】The 6.7-inch high-definition full-fit screen allows you to experience a broader field of view. Small size fits your palm better. Front and rear cameras, vivid colors, every photo is as beautiful as wallpaper. Shoot beautiful portraits, stunning landscapes and clear close-up shots in any light",
+        "brand": "QIMHAI ",
+        "oldPrice": 299,
+        "price": "249",
+        "priceExp": "56 Days",
+        "category": "651833563cbf797f9b7cbda7",
+        "pieces": 200,
+        "rating": {
+            "rate": 5,
+            "count": 259
+        }
+    },
+    {
+        "mainImage":"./images/samsung_tv_1.jpg" ,
+        "section":"feature",
+        "images":["./images/samsung_tv_1.jpg", "./images/samsung_tv_2.jpg"],
+        "subTitle": "Big Screen",
+        "title": "SAMSUNG 32-Inch M50C Series FHD Smart Computer Monitor with Streaming TV, Gaming Hub, Remote PC Access, Multiple Ports, Mobile Connectivity, Built-in IoT Hub, LS32CM502ENXGO, Black",
+        "desc":"SMART TV APPS: Native streaming apps make it easy to watch your shows without a PC and switch between apps with a mouse; Adaptive Picture automatically optimizes screen brightness and Adaptive Sound adjusts audio to the ideal the level* GAMING HUB: Samsung Gaming Hub is the ultimate home for gaming; Instantly play the biggest games from top streaming partners, with no PC or console needed; Discover new games or replay old favorites, all in one place** WORKSPACE: The Smart Monitor lets you access and control your PC remotely, and multi-screen in a major way with wireless PC mirroring; Or go PC-free with direct access to Microsoft 365 and the Internet*** MULTIPLE PORTS: Connect to the Smart Monitor and gain full control by using all your peripherals at once – wireless mouse and keyboard, headphones, additional screens and more; 2 USB-A and 2 HDMI ports enhances and declutters your setup",
+        "brand": "Samsung",
+        "oldPrice": 299,
+        "price": "249",
+        "priceExp": "56 Days",
+        "category": "651833563cbf797f9b7cbda7",
+        "pieces": 200,
+        "rating": {
+            "rate": 5,
+            "count": 259
+        }
+    },
+    {
     "mainImage":"./images/product_Iphone_12_red_1.jpg" ,
     "images":[
         "product_Iphone_12_red_1.jpg",

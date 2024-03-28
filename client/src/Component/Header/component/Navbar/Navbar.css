@@ -45,9 +45,6 @@
     font-weight: 600 !important;
     font-size: 14px !important;
 }
-.navbar>.container-fluid{
-    /* flex-wrap: nowrap !important; */
-}
 
 @media (min-width:768px) {
     .navbar ul .nav-item span{

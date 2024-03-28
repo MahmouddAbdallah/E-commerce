@@ -1,59 +1,21 @@
+import { useEffect, useState } from 'react'
 import Product from '../../../../Component/Product/Product'
-import './Feature.css'
+import axios from 'axios'
 import Cards from './component/Cards'
 
 const Feature = () => {
-    const feature = [
-        {
-            id: 1,
-            image: "./images/headphone.jpg",
-            title: "Haveils",
-            description: "Kids Headphoes Bulk 10 Pack Multi Colord For",
-            star: 4,
-            price: 150
-        },
-        {
-            id: 2,
-            image: "./images/camera.jpg",
-            title: "Sony",
-            description: " camera is a high-quality digital camera that offers exceptional image and video capturing capabilities.",
-            items: "8 itmes",
-            star: 3,
-            price: 150
-        },
-        {
-            id: 3,
-            image: "./images/laptop.jpg",
-            title: "Computers & Laptop",
-            items: "8 itmes",
-            star: 3,
-            price: 150
-        },
-        {
-            id: 4,
-            image: "./images/laptop.jpg",
-            title: "Computers & Laptop",
-            items: "8 itmes",
-            star: 3,
-            price: 150
-        },
-        {
-            id: 4,
-            image: "./images/laptop.jpg",
-            title: "Computers & Laptop",
-            items: "8 itmes",
-            star: 3,
-            price: 150
-        },
-        {
-            id: 4,
-            image: "./images/laptop.jpg",
-            title: "Computers & Laptop",
-            items: "8 itmes",
-            star: 3,
-            price: 150
-        },
-    ]
+    const [featureProducts, setFeatureProducts] = useState([])
+    const getProducts = async () => {
+        try {
+            const { data } = await axios.get(`/api/v1/product?limit=6&find={"section":"feature"}`)
+            setFeatureProducts(data.products);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    useEffect(() => {
+        getProducts()
+    }, [])
     return (
         <div className='features'>
             <div className=' mt-5 TitleHead'>
@@ -61,15 +23,14 @@ const Feature = () => {
             </div>
             <div className=' productFeatures'>
                 <div className='  row justify-content-lg-center rounded'>
-                    {feature.map((item) => (
+                    {featureProducts.map((item) => (
                         <Product
                             className=" my-3 col-6 col-md-4 col-lg-2 "
-                            key={item.id}
-                            title={item.title}
-                            image={item.image}
-                            desc={item.description}
-                            stars={item.star}
-                            price={item.price}
+                            key={item._id}
+                            id={item._id}
+                            image={item.mainImage}
+                            stars={item?.rating?.rate}
+                            {...item}
                         />
                     ))}
                 </div>

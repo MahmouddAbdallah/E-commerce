@@ -1,10 +1,10 @@
-import './Checkout.css'
+import './Cart.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart } from '../../redux/features/product'
 import axios from 'axios';
 import { DataContext } from '../../context/MainContextState';
 
-const Checkout = () => {
+const Cart = () => {
     const cart = useSelector(state => state.Product.cart)
     const disptach = useDispatch()
     const { config } = DataContext()
@@ -16,7 +16,7 @@ const Checkout = () => {
         })
     });
     return (
-        <div className='checkout'>
+        <div className='cart-page'>
             {cart.length
                 ?
                 <div className=' container'>
@@ -87,4 +87,4 @@ const Checkout = () => {
     )
 }
 
-export default Checkout
+export default Cart

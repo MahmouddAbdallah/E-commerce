@@ -1,24 +1,26 @@
 import PropTypes from 'prop-types'
 import './Card.css'
-const Card = ({ image, subTitle, title, price, className }) => {
+import { Link } from 'react-router-dom'
+const Card = ({ _id, mainImage, subTitle, title, price, className }) => {
     return (
-        <div className={`cardFeature ${className}`}>
+        <Link to={`/products/${_id}`} className={`cardFeature ${className}`}>
             <div className="card py-3 px-3">
                 <div className=' text-white'>
                     <p className=' text-uppercase'>{subTitle}</p>
-                    <h5>{title}</h5>
-                    <p>{price}</p>
+                    <h5>{title.slice(0, 50)}</h5>
+                    <p>${price}</p>
                 </div>
                 <div>
-                    <img src={image} className=' img-fluid ' alt="" />
+                    <img src={mainImage} className=' img-fluid ' alt="" />
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
 Card.propTypes = {
-    image: PropTypes.string,
+    mainImage: PropTypes.string,
+    _id: PropTypes.string,
     subTitle: PropTypes.string,
     title: PropTypes.string,
     className: PropTypes.string,

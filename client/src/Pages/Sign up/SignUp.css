@@ -19,9 +19,6 @@
     font-weight: 500;
 }
 @media (min-width:768px){
-    .signup {
-    background: var(--color-gray);
-    }
     .signup form {
         background: var(--color-blue-900);
         width: 400px;

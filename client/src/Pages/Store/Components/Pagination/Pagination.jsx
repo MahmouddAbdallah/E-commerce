@@ -9,6 +9,8 @@ const Pagination = () => {
                 <div className=" d-flex gap-2">
                     <button className={`${page == 1 && "active"}`} onClick={() => { setPage(1) }}>1</button>
                     <button className={`${page == 2 && "active"}`} onClick={() => { setPage(2) }}>2</button>
+                    <button className={`${page == 3 && "active"}`} onClick={() => { setPage(3) }}>3</button>
+                    <button className={`${page == 4 && "active"}`} onClick={() => { setPage(4) }}>4</button>
                 </div>
             </div>
         </div>

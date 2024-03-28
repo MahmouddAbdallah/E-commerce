@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useMemo } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
@@ -7,10 +7,10 @@ import { cart } from '../redux/features/product'
 const createProvider = createContext()
 
 export const MainContextState = ({ children }) => {
+    const [user, setUser] = useState("")
     const token = localStorage.getItem("token")
-    const user = JSON.parse(localStorage.getItem("user"))
+    const userId = localStorage.getItem("userId")
     const disptach = useDispatch()
-
     const config = useMemo(() => {
         return {
             headers: {
@@ -18,6 +18,24 @@ export const MainContextState = ({ children }) => {
             },
         }
     }, [token])
+
+    const getUser = useCallback(
+        async () => {
+            try {
+                const { data } = await axios.get(`/api/v1/user/${userId}`, config)
+                setUser(data.user)
+            } catch (error) {
+                console.error(error);
+            }
+        }, [userId, config]
+    )
+
+    useEffect(() => {
+        if (userId) {
+            getUser();
+        }
+    }, [getUser, userId])
+
     const getCart = useCallback(
         async () => {
             try {
@@ -29,8 +47,10 @@ export const MainContextState = ({ children }) => {
         }, [config, disptach, user]
     )
     useEffect(() => {
-        getCart()
-    }, [getCart])
+        if (user) {
+            getCart()
+        }
+    }, [getCart, user])
     return (
         <createProvider.Provider value={{ token, user, config }}>
             {children}

@@ -60,7 +60,7 @@ const Navbar = () => {
                                     <div to={"/signin"} className='d-flex flex-md-row flex-column gap-2 align-items-center text-decoration-none'>
                                         <GoPerson size={25} />
                                         <div>
-                                            <span > {user.name.split(" ")[0]}</span>
+                                            <span > {user?.name?.split(" ")[0]}</span>
                                         </div>
                                     </div>
                                     :
@@ -73,7 +73,7 @@ const Navbar = () => {
                                 }
                             </li>
                             <li className="nav-item d-flex gap-2 align-items-center">
-                                <Link to={'/checkout'} className='d-flex flex-md-row flex-column gap-2 align-items-center text-decoration-none position-relative'>
+                                <Link to={'/cart'} className='d-flex flex-md-row flex-column gap-2 align-items-center text-decoration-none position-relative'>
                                     <AiOutlineShoppingCart size={30} className='cart' />
                                     {cartLength == 0 ? "" : <div className=' position-absolute cart-length center-center'>
                                         <span>{cartLength}</span>
