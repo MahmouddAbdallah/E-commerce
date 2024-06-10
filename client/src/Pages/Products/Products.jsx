@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Review from './components/Review/Review'
 import Stars from '../../Component/Stars/Stars'
-import ReactImageMagnify from 'react-image-magnify';
+// import ReactImageMagnify from 'react-image-magnify';
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/features/product'
 import { DataContext } from '../../context/MainContextState'
@@ -63,7 +63,7 @@ const Product = () => {
                                                     })}
                                                 </div>
                                                 <div className='m-2 p-2 border rounded' >
-                                                    <ReactImageMagnify
+                                                    {/* <ReactImageMagnify
                                                         {...{
                                                             smallImage: {
                                                                 alt: 'Product Image',
@@ -76,8 +76,8 @@ const Product = () => {
                                                                 height: 1800
                                                             }
                                                         }}
-                                                    />
-                                                    {/* <img src={`${item.mainImage.startsWith(".") ? "." : ""}${item.mainImage}`} className=' img-fluid' alt="" /> */}
+                                                    /> */}
+                                                    <img src={`${item.images[changeImage].startsWith(".") ? "." : ""}${item.images[changeImage] || item.mainImage}`} className=' img-fluid' alt="" />
                                                 </div>
                                             </div>
                                         </div>
