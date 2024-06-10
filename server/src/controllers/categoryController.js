@@ -23,16 +23,16 @@ exports.createCategory = async (req, res) => {
 }
 exports.getCategories = async (req, res) => {
     try {
-        const categorApi = new FeatureAPi(Product, req)
+        const categorApi = new FeatureAPi(Category, req)
             .filters()
             .fields()
             .sort()
             .search()
             .pagenation()
-        const categories = categorApi.Model;
+        const categories = await categorApi.Model;
         res.status(201).json({ categories });
     } catch (error) {
-        res.status(400).json({ error })
+        res.status(400).json({ error: error.message, hello: 'hello' })
     }
 }
 exports.getCategory = async (req, res) => {
@@ -45,7 +45,7 @@ exports.getCategory = async (req, res) => {
             res.status(400).json({ error: "this category is not founded." })
         }
     } catch (error) {
-        res.status(400).json({ error })
+        res.status(400).json({ error: error.message })
     }
 }
 exports.deleteCategory = async (req, res) => {
