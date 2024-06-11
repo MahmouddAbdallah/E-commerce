@@ -18,7 +18,7 @@ dotenv.config({ path: "./.env" });
 app.use(express.json()); //body parser for json data
 app.use(morgan("dev"));
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: true,
     optionsSuccessStatus: 200,
     credentials: true
 }));
