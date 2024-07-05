@@ -23,7 +23,7 @@ const SpecialProducts = () => {
             <div className="row">
                 {
                     spicalProducts
-                        .map((item) => {
+                        ?.map((item) => {
                             return (
                                 <SpecialProductsCard
                                     className={'col-12 col-md-6'}

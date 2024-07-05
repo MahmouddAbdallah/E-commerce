@@ -62,7 +62,7 @@ const PopularProducts = () => {
                 <h4>Our Popular Products</h4>
             </div>
             <div className='  row'>
-                {popularProducts.map((item) => (
+                {popularProducts?.map((item) => (
                     <Product
                         className=" my-3 col-6 col-md-4 col-lg-3 "
                         key={item.id}

@@ -43,7 +43,7 @@ const Product = () => {
             {loading ?
                 <div className=' container py-5'>
                     <div>
-                        {[product].map((item) => {
+                        {[product]?.map((item) => {
                             const stars = item?.rating?.rate
                             return (
                                 <div key={item._id} className=' bg-white'>
@@ -51,7 +51,7 @@ const Product = () => {
                                         <div className='col-12 col-lg-5'>
                                             <div className='d-flex  gap-2 p-3'>
                                                 <div className='d-flex flex-column gap-2 pt-2'>
-                                                    {item.images.map((image, i) => {
+                                                    {item?.images?.map((image, i) => {
                                                         return (
                                                             <button onClick={(e) => {
                                                                 e.preventDefault()

@@ -23,7 +23,7 @@ const Feature = () => {
             </div>
             <div className=' productFeatures'>
                 <div className='  row justify-content-lg-center rounded'>
-                    {featureProducts.map((item) => (
+                    {featureProducts?.map((item) => (
                         <Product
                             className=" my-3 col-6 col-md-4 col-lg-2 "
                             key={item._id}

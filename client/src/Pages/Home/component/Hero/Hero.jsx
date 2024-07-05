@@ -55,7 +55,7 @@ const Hero = () => {
                         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
 
                             <div className="carousel-inner">
-                                {slide.map((item) => {
+                                {slide?.map((item) => {
                                     return (
                                         <div key={item.id} className={`position-relative carousel-item ${item.id == 1 ? "active" : ""}`}>
                                             <img src={item.image}
@@ -86,7 +86,7 @@ const Hero = () => {
                     </div>
                     <div className="col-12 col-lg-6">
                         <div className="row mt-3 mt-lg-0">
-                            {smallBanner.map((item) => {
+                            {smallBanner?.map((item) => {
                                 return (
                                     <div key={item.id} className="col-6 mb-3">
                                         <div className=" position-relative">

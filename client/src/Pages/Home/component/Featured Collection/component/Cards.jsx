@@ -20,7 +20,7 @@ const Cards = () => {
         <div className="pt-5 cards">
             <div className="row gap-lg-3 ">
                 {
-                    featureProductsCards.map((item, i) => {
+                    featureProductsCards?.map((item, i) => {
                         return (
                             <Card
                                 key={item.id}

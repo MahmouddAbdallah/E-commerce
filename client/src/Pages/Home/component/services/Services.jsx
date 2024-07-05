@@ -35,7 +35,7 @@ const Services = () => {
     return (
         <div className="row  py-5 serviecs">
             {
-                service.map((item) => (
+                service?.map((item) => (
                     <div key={item.id} className="col-6  col-md-4 col-lg-3 my-3">
                         <div className='d-flex gap-2 align-items-center'>
                             <div>

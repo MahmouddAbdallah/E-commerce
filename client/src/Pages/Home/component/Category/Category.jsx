@@ -25,7 +25,7 @@ const Category = () => {
             {loading ?
                 <div className="row bg-white categroy px-4 py-4">
                     {
-                        categroies.map((item) => (
+                        categroies?.map((item) => (
                             <div key={item._id} className="col-6 col-lg-3 py-3 px-2 px-sm-3 ">
                                 <div className='d-flex gap-2 align-items-center justify-content-between'>
                                     <div className=' lh-sm'>

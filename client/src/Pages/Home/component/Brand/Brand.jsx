@@ -50,7 +50,7 @@ const Brand = () => {
         <div className=''>
             <div className=' mt-5 bg-white rounded shadow-sm row'>
                 <Marquee>
-                    {brand.map((item) => (
+                    {brand?.map((item) => (
                         <div target='blank' key={item.id} className=' mx-4'>
                             <img src={item.img} className=' img-fluid' alt="" />
                         </div>

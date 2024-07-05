@@ -40,7 +40,7 @@ const Search = () => {
                     </div>
                     <div className=' col-9'>
                         {
-                            product.map((item) => (
+                            product?.map((item) => (
                                 <Link to={`/products/${item._id}`} key={item._id} >
                                     <div className='row  bg-white product p-3 my-3'>
                                         <div className='col-2'>

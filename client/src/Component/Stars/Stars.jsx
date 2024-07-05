@@ -7,7 +7,7 @@ const Stars = ({ stars }) => {
             <div className='d-flex gap- stars'>
                 {Array(Math.floor(stars))
                     .fill()
-                    .map((_, i) => {
+                    ?.map((_, i) => {
                         return (
                             <div key={i}  >
                                 <AiFillStar className='star' />

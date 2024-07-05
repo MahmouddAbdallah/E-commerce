@@ -26,7 +26,7 @@ const SpecialProductsCard = ({ _id, images, brand, title, oldPrice, stars, price
                         </div>
                         <div>
                             <div className="d-flex justify-content-center gap-2">
-                                {images.map((item, i) => {
+                                {images?.map((item, i) => {
                                     return (
                                         <button
                                             onClick={(e) => {
