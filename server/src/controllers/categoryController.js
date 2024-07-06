@@ -30,7 +30,7 @@ exports.getCategories = async (req, res) => {
             .search()
             .pagenation()
         const categories = await categorApi.Model;
-        res.status(201).json({ categories });
+        res.status(200).json({ categories });
     } catch (error) {
         res.status(400).json({ error: error.message, hello: 'hello' })
     }
@@ -40,7 +40,7 @@ exports.getCategory = async (req, res) => {
         const { id } = req.params
         const category = await Category.findById(id)
         if (category) {
-            res.status(201).json({ category });
+            res.status(200).json({ category });
         } else {
             res.status(400).json({ error: "this category is not founded." })
         }
@@ -53,7 +53,7 @@ exports.deleteCategory = async (req, res) => {
         const { id } = req.params
         const category = await Category.findByIdAndDelete(id)
         if (category) {
-            res.status(201).json({ category });
+            res.status(200).json({ category });
         } else {
             res.status(400).json({ error: "this category is not founded." })
         }
@@ -66,7 +66,7 @@ exports.updateCategory = async (req, res) => {
         const { id } = req.params
         const category = await Category.findByIdAndUpdate(id)
         if (category) {
-            res.status(201).json({ category });
+            res.status(200).json({ category });
         } else {
             res.status(400).json({ error: "this category is not founded." })
         }

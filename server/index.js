@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json()); // Body parser for JSON data
 app.use(morgan("dev"));
 app.use(cors({
-    origin: true,
+    origin: process.env.FRONTEND_URL,
     optionsSuccessStatus: 200,
     credentials: true
 }));
