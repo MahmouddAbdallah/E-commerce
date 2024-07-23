@@ -1,5 +1,5 @@
 import { ContextState } from '../context/ContextState'
-import Colors from './Colors/Colors'
+// import Colors from './Colors/Colors'
 import './FilterBy.css'
 const FilterBy = () => {
     const { priceFrom, setPriceFrom, priceTo, setPriceTo, } = ContextState()
@@ -35,12 +35,12 @@ const FilterBy = () => {
                     </form>
                 </div>
                 <div className='pt-4'>
-                    <div className=''>
+                    {/* <div className=''>
                         <h6>Color</h6>
                     </div>
                     <div>
                         <Colors />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

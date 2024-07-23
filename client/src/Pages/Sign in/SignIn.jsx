@@ -17,6 +17,7 @@ const SignIn = () => {
             localStorage.setItem('userId', data.user._id);
             localStorage.setItem("token", data.token)
             navigate('/')
+            window.location.reload()
         } catch (error) {
             console.error(error);
         }

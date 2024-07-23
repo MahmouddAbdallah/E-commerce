@@ -54,6 +54,18 @@ exports.getProducts = async (req, res) => {
         res.status(400).json({ error: error.message })
     }
 }
+exports.productByCategory = async (req, res) => {
+    try {
+        const { categoryId } = req.params;
+        console.log({ categoryId });
+        const products = await Product.find({
+            category: categoryId
+        })
+        res.status(200).json({ products });
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
 exports.getProduct = async (req, res) => {
     try {
         const { id } = req.params

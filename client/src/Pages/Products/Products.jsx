@@ -38,6 +38,11 @@ const Product = () => {
         disptach(addToCart(data.cart))
         console.log(data.cart.product);
     }
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+        })
+    }, [])
     return (
         <div className='products'>
             {loading ?

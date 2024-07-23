@@ -5,28 +5,39 @@ import { useCallback, useEffect, useState } from 'react';
 import Stars from '../../Component/Stars/Stars';
 import FilterBy from './component/Filter By/Filter By/FilterBy';
 const Search = () => {
-    const [searchParams] = useSearchParams();
     const [product, setProduct] = useState([])
     const [priceFrom, setPriceFrom] = useState("")
     const [priceTo, setPriceTo] = useState("")
+    const [searchParams] = useSearchParams();
     const searchItem = searchParams.get("searchItem");
+    const categoryId = searchParams.get("categoryId");
     const getProducts = useCallback(
         async () => {
             try {
                 if (searchItem) {
-                    const { data } = await axios.get(`/api/v1/product?keyword=${searchItem}&${(priceFrom == "" || priceTo == "") ? "" : `price[gte]=${priceFrom}&price[lte]=${priceTo}`}`)
+                    const { data } = await axios.get(`/api/v1/product?keyword=${searchItem?.split(' ')[0]}&${(!priceFrom || !priceTo) ? "" : `price[gte]=${priceFrom}&price[lte]=${priceTo}`}`)
                     setProduct(data.products);
-                } else {
+                }
+                else if (categoryId) {
+                    const { data } = await axios.get(`/api/v1/product/by-category/${categoryId}`)
+                    setProduct(data.products);
+                }
+                else {
                     setProduct([])
                 }
             } catch (error) {
                 console.error(error);
             }
-        }, [priceFrom, priceTo, searchItem]
+        }, [categoryId, priceFrom, priceTo, searchItem]
     )
     useEffect(() => {
         getProducts()
     }, [getProducts])
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+        })
+    }, [])
     return (
         <div className='search-page'>
             <div className=' container py-5'>

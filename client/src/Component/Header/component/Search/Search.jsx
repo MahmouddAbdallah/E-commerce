@@ -61,16 +61,17 @@ const Search = () => {
                 </button>
             </form>
             {keyword &&
-                <div className=' position-absolute w-100 bg-white show-search start-0 '>
+                <div className='position-absolute w-100 bg-white show-search start-0 rounded-bottom-2'>
                     {search.map((item) => (
                         <div
                             onClick={() => {
                                 handleSearchProduct(item.title.toLowerCase(), item.category.name)
                             }}
-                            className=' text-black cursor-pointer' key={item._id}>
-                            <h6>
+                            className=' text-black cursor-pointer px-2 py-2 d-flex align-items-center gap-2' key={item._id}>
+                            <BiSearch />
+                            <span className='d-block'>
                                 {item.title.length > 50 ? `${item.title.slice(0, 50)}...` : item.title}
-                            </h6>
+                            </span>
                         </div>
                     ))}
                 </div>
